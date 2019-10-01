@@ -1,0 +1,52 @@
+/*!
+ *  Basic font to be overridden - http://fonts.googleapis.com/css?family=Raleway:200,300,400,600,700
+ *  There should be 5 font weight from extra light to bold (see weight in CSS)
+ */
+
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'MobiSans';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url('../fonts/raleway-200.woff?v=1.0.0.woff') format('woff');
+  /*
+  src: local('Roboto Thin'), local('Roboto-Thin'), url('../fonts/roboto-100.woff?v=1.0.0.woff') format('woff');
+  */
+}
+@font-face {
+  font-family: 'MobiSans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url('../fonts/raleway-300.woff?v=1.0.0.woff') format('woff');
+  /*
+  src: local('Roboto Light'), local('Roboto-Light'), url('../fonts/roboto-300.woff?v=1.0.0.woff') format('woff');
+  */
+}
+@font-face {
+  font-family: 'MobiSans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url('../fonts/raleway-400.woff?v=1.0.0.woff') format('woff');
+  /*
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto-400.woff?v=1.0.0.woff') format('woff');
+  */
+}
+@font-face {
+  font-family: 'MobiSans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url('../fonts/raleway-600.woff?v=1.0.0.woff') format('woff');
+  /*
+  src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/roboto-500.woff?v=1.0.0.woff') format('woff');
+  */
+}
+@font-face {
+  font-family: 'MobiSans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url('../fonts/raleway-700.woff?v=1.0.0.woff') format('woff');
+  /*
+  src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/roboto-700.woff?v=1.0.0.woff') format('woff');
+  */
+}

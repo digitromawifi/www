@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt_PT" data-path="logged.html">
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11;chrome=1">
+        <title>DigitRomaWiFi</title>
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fonts -->
+        <link rel="stylesheet" type="text/css" href="../css/font-basic.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="../css/custom.css">
+        <link rel="stylesheet" type="text/css" href="/stock/roma/css/spid.css?v=1.0">
+        <link rel="stylesheet" type="text/css" href="/stock/roma/css/digitroma.css?v=1.0">
+        <!-- Script -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/jquery.all.js"></script>
+    </head>
+    <body>
+        <div id="page-content">
+            <div class="section header" data-uuid="00000000-0000-0000-1111-000000000001">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-full-column u-righted">
+                            <div class="topmenu-home">
+                                <img class="logo" src="/stock/roma/img/logo-roma-big-dark.png"><span id="button-home-return" class="wording">HOME</span>
+                            </div>
+                            <div class="topmenu-plus-lang-container">
+                                <img id="lang-dropdown-flag" src="/stock/roma/img/xu_XU.gif" class="lang-flag-ext" alt="lang" />
+                                <div id="lang-dropdown" class="lang-toggler-button lang-toggler-button-tip lang-toggler-button-anchor-right lang-toggler-button-relative">
+                                    <ul id="lang-dropdown-root" class="lang-toggler-button-menu" aria-labelledby="languages">
+                                        <li class="language-link" data-lang="de_DE" data-dest="index_de.html">
+                                            <label><span class="lang-desc">Deutsch</span><img src="/stock/roma/img/de_DE.gif" class="lang-flag" alt="de" data-path="de" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="en_US" data-dest="index_en.html">
+                                            <label><span class="lang-desc">English</span><img src="/stock/roma/img/en_US.gif" class="lang-flag" alt="en" data-path="en" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="es_ES" data-dest="index_es.html">
+                                            <label><span class="lang-desc">Español</span><img src="/stock/roma/img/es_ES.gif" class="lang-flag" alt="es" data-path="es" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="fr_FR" data-dest="index_fr.html">
+                                            <label><span class="lang-desc">Français</span><img src="/stock/roma/img/fr_FR.gif" class="lang-flag" alt="fr" data-path="fr" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="it_IT" data-dest="index_it.html">
+                                            <label><span class="lang-desc">Italian</span><img src="/stock/roma/img/it_IT.gif" class="lang-flag" alt="it" data-path="it" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="pt_PT" data-dest="index_pt.html">
+                                            <label><span class="lang-desc">Português</span><img src="/stock/roma/img/pt_PT.gif" class="lang-flag" alt="pt" data-path="pt" /></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section main-banner" data-uuid="00000000-0000-0000-1111-000000000003">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-full-columns column">
+                            <div class="min550w"><br><br></div>
+                            <img id="logo-digitroma" src="/stock/roma/img/logo-digitroma3.png"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section welcome-text" data-uuid="00000000-0000-0000-1111-000000000004">
+                <div class="container" style="margin-top:.5em">
+                    <div class="row">
+                        <div class="one-full column">
+                            <p style="font-size:120%">Bem-vindo</p>
+                            <p>Navegue acesso gratuito à Internet 4 horas por dia com a rede Wi-Fi Hotspot Roma.<br>O registro é rápido e fácil.</p>
+                            <p>Como podemos ajudar? <a href="faq.html">FAQ</a></p>
+                            <p>
+                            Descubra HotSpot Digit Roma WiFi<br><br>
+                            <a id="hotspotFinderButton" class="button button-primary button-old-brick spid-like" style="max-width:300px;" href="finder.html" >Próximo</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section login-choices" data-uuid="00000000-0000-0000-1111-000000000005">
+                <div class="container">
+                    <div class="row separator"></div>
+                    <div class="row">
+                        <div class="six columns">
+                            <div id="authenticationHangupCall2" class="auth-method box-gray">
+                                <form>
+                                    <div id="logged-waiting">
+                                        <h5 class="subtitle"><br><br><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">...</span></h5>
+                                    </div>
+                                    <div id="logged-ok" class="u-concealed">
+                                        <h5 class="subtitle">Usuário conectado</h5>
+                                        <p class="box-explanation">Agora você pode navegar livremente com DigitRoma WiFi.</p>
+                                    </div>
+                                    <div id="logged-ko" class="u-concealed">
+                                        <h5 class="subtitle">Usuário não conectado</h5>
+                                        <p class="box-explanation">Parece que sua conexão não está ativa, tente <a href="http://redirect.mobimesh.eu/?d=http%3A%2F%2Fwww.digitromawifi.it%2Flogged.html">clicar aqui</a> para tentar novamente o login. Caso isso não funcione, tente também desabilitar e ativar novamente o WiFi do seu aparelho.</p>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </form>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="six columns">
+                            <div id="authenticationRegisterBox" class="auth-method box-gray u-concealed">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                
+                    var waitingBox = $("#logged-waiting");
+                    var okBox = $("#logged-ok");
+                    var koBox = $("#logged-ko");
+                    
+                    var showOnline = function() { waitingBox.hide(); okBox.show(); };
+                    var showOffline = function() { waitingBox.hide(); koBox.show(); };
+                
+                    checkStatus(showOnline, showOffline, showOnline);
+                });
+            </script>
+            <div class="section links" data-uuid="00000000-0000-0000-1111-000000000006">
+                <div class="container">
+                    <div class="row separator"></div>
+                    <div class="row separator"></div>
+                    <div class="row">
+                        <div class="four columns" id="bottom-social">
+                            <h5 class="bottom-header">Siga em Roma Rede Social</h5>
+                            <ul class="bottom-list">
+                                <li>
+                                    <a href="https://www.facebook.com/RomaCapitaleOfficialPage" target="_blank"> 
+                                    <img src="/stock/roma/img/logo-facebook.png" class="identity">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/user/NotizieRomaCapitale" target="_blank"> 
+                                    <img src="/stock/roma/img/logo-youtube.png" class="identity">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/roma" target="_blank"> 
+                                    <img src="/stock/roma/img/logo-twitter.png" class="identity">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="four columns" id="bottom-roma-on-the-web">
+                            <a href="links.html"><h5 class="bottom-header">Siga Roma na Web</h5></a>
+                            <ul class="bottom-list">
+                                <li>
+                                    <a href="links.html">
+                                    <img src="/stock/roma/img/logo-comune.png" class="identity">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="links.html">
+                                    <img src="/stock/roma/img/logo-polizia.png" class="identity">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="links.html">
+                                    <img src="/stock/roma/img/logo-atac.png" class="identity">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="four columns" id="bottom-apps">
+                            <h5 class="bottom-header">Descubra as Nossas Apps</h5>
+                            <ul class="bottom-list">
+                                <li>
+                                    <a href="app-ios.html" data-platform="ios">
+                                    <img src="/stock/roma/img/logo-appstore.png" class="identity">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="app-android.html" data-platform="android">
+                                    <img src="/stock/roma/img/logo-android.png" class="identity">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="app-windows.html" data-platform="windows">
+                                    <img src="/stock/roma/img/logo-windows.png" class="identity">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section explanation" data-stripe="00000000-0000-0000-1111-000000000081" style="color: #000000; background-color: #FFFFFF;">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-full column">
+                            <div id="explanation00000000-0000-0000-1111-000000000081Description_element">Info and communications <a href="mailto:info.digitroma@comune.roma.it">contact us</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section pre-footer" data-uuid="00000000-0000-0000-1111-000000000007">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-full column">
+                            <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2018 - Roma Capitale - Todos os direitos reservados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

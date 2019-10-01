@@ -1,0 +1,616 @@
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.user-clickable {
+    cursor: pointer;
+}
+.like-text-link {
+    text-decoration: underline;
+    color: blue;
+}
+.not-displayed {
+    display: none;
+}
+.not-visible {
+    visibility: hidden;
+}
+
+.container {
+    max-width: 800px;
+}
+.min550w {
+    display: none;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  max-height: 3.6rem;
+  color: #000
+}
+
+.foo-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.checkradio-container {
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+.checkradio-container .label-body {
+    display: block;
+    margin-left: 20px;
+}
+
+.checkradio-container input[type="checkbox"],
+.checkradio-container input[type="radio"] {
+    display: block;
+    position: absolute;
+    top: 1.5px;
+}
+
+.label-body,
+.label-small {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+.registration-field-container.invalid input[type="email"],
+.registration-field-container.invalid input[type="number"],
+.registration-field-container.invalid input[type="text"],
+.registration-field-container.invalid input[type="date"],
+.registration-field-container.invalid input[type="tel"],
+.registration-field-container.invalid input[type="url"],
+.registration-field-container.invalid input[type="password"],
+.registration-field-container.invalid textarea,
+input[type="email"].invalid,
+input[type="number"].invalid,
+input[type="text"].invalid,
+input[type="date"].invalid,
+input[type="tel"].invalid,
+input[type="url"].invalid,
+input[type="password"].invalid,
+textarea.invalid {
+  border-color: #300;
+  background-color: #fdd;
+}
+
+.registration-field-container.invalid label,
+.registration-field-container.invalid .label-body,
+.registration-field-container.invalid .label-small {
+    color: #e00;
+    font-weight: bold;
+}
+
+.registration-field-container.field-boolean.field-last {
+    margin-bottom: 1em;
+}
+
+/* Popups
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.middle-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 1000;
+}
+.inner-content {
+    position: relative;
+    top: 50%;
+    background-color: #fff;
+    box-shadow: 0 .3rem 1.5rem rgba(0, 0, 0, .25);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.inner-content .row .column,
+.inner-content .row .columns {
+    text-align: center;
+}
+#wait-popup  { z-index: 1001; }
+#alert-popup { z-index: 1002; }
+
+.stand             { display: table; table-layout:fixed; }
+.stand .bay        { display: table-cell; }
+.stand .bay.up     { vertical-align: top; }
+.stand .bay.center { vertical-align: middle; }
+.stand .bay.bottom { vertical-align: bottom; }
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section.editor {
+    font: 300 16px/1.55 "Open Sans", sans-serif;
+}
+label, legend {
+    font-weight: normal;
+    font-size: 14px;
+} 
+.ellipsable {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Elements
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#authenticationCarousel {
+    padding: 3.5rem 0 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+#authenticationCarousel.framed {
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+    background-color: #fff;
+    box-shadow: 0 .3rem 1.5rem rgba(0, 0, 0, .42);
+    overflow: hidden;
+}
+
+#authenticationCarousel.untitled .alternative-method-label {
+    display: none;
+}
+
+#authenticationCarousel.unlabeled label.registration-field-label.label-small {
+    display: none;
+}
+
+#authenticationCarousel .auth-method:first-child .alternative-method-label {
+    display: none;
+}
+
+#authenticationCarousel .auth-method .checkradio-container {
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+#authenticationCarousel .button,
+#authenticationCarousel button,
+#authenticationCarousel input[type="submit"],
+#authenticationCarousel input[type="reset"],
+#authenticationCarousel input[type="button"],
+#authenticationCarousel input[type="email"],
+#authenticationCarousel input[type="number"],
+#authenticationCarousel input[type="search"],
+#authenticationCarousel input[type="text"],
+#authenticationCarousel input[type="date"],
+#authenticationCarousel input[type="tel"],
+#authenticationCarousel input[type="url"],
+#authenticationCarousel input[type="password"],
+#authenticationCarousel textarea,
+#authenticationCarousel select {
+    width: 80%;
+}
+
+#authenticationCarousel .button,
+#authenticationCarousel button {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#authenticationCoupon,
+#authenticationCoupon .alternative-method-label,
+#authenticationSocial,
+#authenticationSocial .alternative-method-label,
+#authenticationClassic .alternative-method-label {
+    margin-bottom: 2.5rem;
+}
+
+#authenticationSocial form:not(:last-child) {
+    margin-bottom: 0;
+}
+
+#authenticationScratchCard,
+#authenticationScratchCard .alternative-method-label {
+    margin-bottom: 1rem;
+}
+
+#recoverButton,
+#accountButton {
+    width: 95%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#groupCode,
+#scratchCode {
+    display: inline-block;
+    max-width: 60%;
+}
+
+#groupCodeSubmit,
+#scratchCodeSubmit {
+    display: inline-block;
+    width: 28%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#authenticationCarousel .multiple-buttons-container {
+    width: 80%;
+    margin: 1.2em auto;
+}
+
+#authenticationCarousel .multiple-buttons-container .multiple-button-instance {
+    display: inline-block;
+    padding: 0 5px;
+    width: 100%;
+    max-height: none;
+}
+
+.banner.stand {
+  width: 100%;
+  margin: 1em 0;
+}
+.app-icon.bay {
+  width: 20%;
+}
+.app-icon.bay img {
+  min-width: 60px;
+  max-width: 96px;
+  margin-top: 10px;
+}
+.app-desc.bay {
+  width: 78%;
+  padding-left: 0.5em;
+}
+
+.app-desc.bay p {
+  margin: 0;
+}           
+.app-download.bay {
+  width: 1%;
+  position: relative;
+}       
+.app-download.bay input[type=button] {
+  padding: 0 10px;
+  min-width: 100px;
+  position: absolute;
+  top: 12px;
+  right:0;
+}
+
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.button-twitter {
+    background-color: #4b96d7 !important;
+    border-color: #4b96d7 !important;
+    color: #fff !important;
+}
+.button-twitter:hover {
+    background-color: #3570b2 !important;
+}
+
+.button-fb {
+    background-color: #3b5998 !important;
+    border-color: #3b5998 !important;
+    color: #fff !important;
+}
+.button-fb:hover {
+    background-color: #2b4988 !important;
+}
+
+.button-google {
+    background-color: #d4362e !important;
+    border-color: #d4362e !important;
+    color: #fff !important;
+}
+.button-google:hover {
+    background-color: #c9171f !important;
+}
+
+.button-instagram {
+    color: #fff !important;
+    border: none !important;
+    background: #244b73 !important;
+    background: -moz-linear-gradient(left, #ccc12a 0%, #ee2a7b 50%, #002aff 100%) !important;
+    background: -webkit-linear-gradient(left, #ccc12a 0%,#ee2a7b 50%,#002aff 100%) !important;
+    background: linear-gradient(to right, #ccc12a 0%,#ee2a7b 50%,#002aff 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccc12a', endColorstr='#002aff',GradientType=1 ) !important;
+}
+.button-instagram:hover {
+    color: #fff !important;
+    border: none !important;
+    background: #234a72 !important;
+    background: -moz-linear-gradient(left, #bbc029 0%, #dd207a 50%, #0029de 100%) !important;
+    background: -webkit-linear-gradient(left, #bbc029 0%,#dd207a 50%,#0029de 100%) !important;
+    background: linear-gradient(to right, #bbc029 0%,#dd207a 50%,#0029de 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbc029', endColorstr='#0029de',GradientType=1 ) !important;
+}
+
+.button-linkedin {
+    background-color: #0077b5 !important;
+    border-color: #0066a4 !important;
+    color: #fff !important;
+}
+.button-linkedin:hover {
+    background-color: #0067a5 !important;
+}
+
+.button.disabled,
+button.disabled,
+input[type="submit"].disabled,
+input[type="reset"].disabled,
+input[type="button"].disabled {
+    background-color: #aaa !important;
+    border-color: #aaa !important;
+    color: #ddd !important;
+    cursor: not-allowed;
+   }
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.section {
+    text-align: center;
+}
+.section.fulllogo {
+    background-color: #064478;
+    color: #ffffff;
+    padding-top: 2em;
+}
+.section.title {
+    background-color: #064478;
+    color: #ffffff;
+}
+.section.title .sticker img {
+    max-height: 20rem;
+    width: auto;
+}
+.section.title .claim h4 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+.section.titlebay,
+.section.titlebay2 {
+    background-color: #064478;
+    color: #ffffff;
+}
+.section.titlebay .logo {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+    line-height: initial;
+}
+.section.titlebay2 .logo {
+    padding: 1rem;
+    line-height: initial;
+}
+.section.banner {
+    padding: 10rem 0 8rem;
+    /* Glow
+    -webkit-stroke-width: 5px;
+    -webkit-stroke-color: #ffffff;
+    -webkit-fill-color: #ffffff;
+    text-shadow: 1px 1px 1px #ffffff;
+    */
+}
+.section.subject .button,
+.section.subject button,
+.section.subject input[type="submit"] {
+  width: auto;
+}
+.section.subject .main .content {
+    text-align: left;
+    overflow: hidden;
+    padding: 8rem 2rem 0;
+}
+.section.subject .main .content .checkradio-container {
+    margin-left: 0;
+    margin-right: 0;
+}
+.section.subject .main .content label {
+    font-weight: normal;
+}
+.section.subject .main.alone .content {
+    padding-bottom: 8rem;
+}
+.section.subject .side .content {
+    overflow: hidden;
+    padding: 8rem 2rem;
+}
+.section.subject .side .content {
+    margin: 2rem 0;
+    background-color: #a5a5a5;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.section.subject .side-controls {
+    text-align: center;
+    margin-top: 5rem;
+}
+.section.banner {
+    background: url("../images/background-top.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+.section.explanation,
+.section.inv-dispatcher {
+    font-weight: 300;
+    background-color: #064478;
+    color: #ffffff;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+.section.multiforms {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #000;
+}
+.section.multiforms .alternative-method-label {
+    display: inline-block;
+    position: relative;
+}
+.section.multiforms .alternative-method-label h6 {
+    color: #777;
+    line-height: 0.25rem;
+}
+.section.multiforms #authenticationCarousel.dashed .alternative-method-label h6:before,
+.section.multiforms #authenticationCarousel.dashed .alternative-method-label h6:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-bottom: 1px dashed #dedede;
+    top: 0;
+    width: 600px;
+}
+
+.section.multiforms #authenticationCarousel.dashed .alternative-method-label h6:before {
+    right: 100%;
+    margin-right: 1rem;
+}
+
+.section.multiforms #authenticationCarousel.dashed .alternative-method-label h6:after {
+    left: 100%;
+    margin-left: 1rem;
+}
+.section.footer {
+    padding: 5rem 0 1rem;
+    background-color: #064478;
+    color: #ffffff;
+    font-size: 80%;
+}
+
+/* Media queries bottom-to-top
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 550px) {
+    .min550w {
+        display: block;
+    }
+    .max549w {
+        display: none;
+    }
+    .section.title {
+        padding: 3rem 0;
+        height: 4rem;
+        position: relative;
+    }
+    .section.title .sticker {
+        position: absolute;
+        z-index: 100;
+    }
+    .section.title .claim {
+        text-align: right;
+    }
+    .section.title .claim h4 {
+        font-size: 2.1rem;
+        display: inline;
+    }
+    .section.title .sticker {
+        background-image: url("../images/sticker.png");
+        background-size: 1rem 14rem;
+        background-repeat: repeat-x;
+        height: 14rem;
+        width: 18rem;
+        margin-top: -3rem;
+        margin-left: -1rem;
+        box-shadow: 0 .3rem 1.5rem rgba(0, 0, 0, .1);
+    }
+    .section.title .sticker img {
+        max-height: 100%;
+    }
+    .section.titlebay .words {
+        text-align: right;
+    }
+    .section.titlebay .words h5 {
+        margin-bottom: 0;
+        padding-top: 15%;
+    }
+    .section.titlebay2 .words {
+        text-align: left;
+    }
+    .section.titlebay2 .words h5 {
+        margin-bottom: 0;
+        padding-top: 6.25%;
+    }
+    .section.banner {
+        padding: 15rem 0;
+        min-height: 15rem;
+    }
+}
+/* Little width fixes */
+@media (min-width: 550px) and (max-width: 649px) {
+    
+    #authenticationCarousel {
+        width: 85%;
+        margin-left: 7.5%;
+    }
+
+    .button,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea,
+    select {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+@media (min-width: 650px) and (max-width: 750px) {
+    
+    #authenticationCarousel {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media (min-width: 750px) {
+    .section.title .claim h4 {
+        font-size: 3rem;
+    }
+    .section.banner {
+        background-position: bottom right;
+        text-align: left;
+    }
+    .button,
+    button,
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    textarea,
+    select {
+      width: 95%;
+    }
+}

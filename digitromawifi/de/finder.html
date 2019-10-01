@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de_DE" data-path="finder.html">
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11;chrome=1">
+        <title>DigitRomaWiFi</title>
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Fonts -->
+        <link rel="stylesheet" type="text/css" href="../css/font-basic.css">
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="../css/custom.css">
+        <link rel="stylesheet" type="text/css" href="/stock/roma/css/spid.css?v=1.0">
+        <link rel="stylesheet" type="text/css" href="/stock/roma/css/digitroma.css?v=1.0">
+        <!-- Script -->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/jquery.all.js"></script>
+        <script type="text/javascript" src="../js/map.js"></script>
+        <script type="text/javascript" src="../js/markerclusterer.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxajFpf3EuOObZYvpyEU6XAmEiMUokQDY&callback=googleMapCallback"></script>
+    </head>
+    <body style="position:relative; display:none;">
+        <div id="button-backtotop"><i class="fa fa-arrow-up"></i></div>
+        <div id="page-content">
+            <div class="section barhead">
+                <div class="one-full-column">
+                    <span class="distantied">In der Nähe</span><i id="button-home-return" class="fa fa-arrow-left distantied right-return"></i>
+                </div>
+            </div>
+            <!--
+            <div class="section header" data-uuid="00000000-0000-0000-1111-000000000001">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-full-column u-righted">
+                            <div class="topmenu-home">
+                                <img class="logo" src="/stock/roma/img/logo-roma-big-dark.png"><span id="button-home-return" class="wording">HOME</span>
+                            </div>
+                            <div class="topmenu-plus-lang-container">
+                                <img id="lang-dropdown-flag" src="/stock/roma/img/xu_XU.gif" class="lang-flag-ext" alt="lang" />
+                                <div id="lang-dropdown" class="lang-toggler-button lang-toggler-button-tip lang-toggler-button-anchor-right lang-toggler-button-relative">
+                                    <ul id="lang-dropdown-root" class="lang-toggler-button-menu" aria-labelledby="languages">
+                                        <li class="language-link" data-lang="de_DE" data-dest="index_de.html">
+                                            <label><span class="lang-desc">Deutsch</span><img src="/stock/roma/img/de_DE.gif" class="lang-flag" alt="de" data-path="de" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="en_US" data-dest="index_en.html">
+                                            <label><span class="lang-desc">English</span><img src="/stock/roma/img/en_US.gif" class="lang-flag" alt="en" data-path="en" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="es_ES" data-dest="index_es.html">
+                                            <label><span class="lang-desc">Español</span><img src="/stock/roma/img/es_ES.gif" class="lang-flag" alt="es" data-path="es" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="fr_FR" data-dest="index_fr.html">
+                                            <label><span class="lang-desc">Français</span><img src="/stock/roma/img/fr_FR.gif" class="lang-flag" alt="fr" data-path="fr" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="it_IT" data-dest="index_it.html">
+                                            <label><span class="lang-desc">Italian</span><img src="/stock/roma/img/it_IT.gif" class="lang-flag" alt="it" data-path="it" /></label>
+                                        </li>
+                                        <li class="language-link" data-lang="pt_PT" data-dest="index_pt.html">
+                                            <label><span class="lang-desc">Português</span><img src="/stock/roma/img/pt_PT.gif" class="lang-flag" alt="pt" data-path="pt" /></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
+            <div class="section custom-toolbar">
+                <div class="container">
+                    <div class="row">
+                        <div id="button-nearby" class="toolbar-element like-button button-toggle with-icon" data-companion="button-hotspots">
+                            <img class="icon" src="/stock/roma/img/bar-button-nearby.png">&nbsp;<span class="element-title">Vitrine</span>
+                        </div>
+                        <div id="button-hotspots" class="toolbar-element like-button button-toggle with-icon" style="display:none;" data-companion="button-nearby">
+                            <img class="icon" src="/stock/roma/img/bar-button-hotspots.png">&nbsp;<span class="element-title">Hotspots</span>
+                        </div>
+                        <div id="button-listview" class="toolbar-element like-button button-toggle with-icon close" data-companion="button-mapview">
+                            <img class="icon" src="/stock/roma/img/bar-button-listview.png">&nbsp;<span class="element-title">Kartenansicht</span>
+                        </div>
+                        <div id="button-mapview" class="toolbar-element like-button button-toggle with-icon close" style="display:none;" data-companion="button-listview">
+                            <img class="icon" src="/stock/roma/img/bar-button-mapview.png">&nbsp;<span class="element-title">Listenansicht</span>
+                        </div>
+                        <div class="toolbar-element">
+                            <input id="field-search" type="text" placeholder="Suche...">
+                        </div>
+                        <div id="button-search" class="toolbar-element like-button only-icon closest">
+                            <img class="icon" src="/stock/roma/img/bar-button-search.png">&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section outwarning">
+                <div class="container">
+                    <div class="row">
+                        <div class="one-full-column">
+                            <div id="ap-warning">
+                                Da Sie nicht angemeldet sind, arbeitet diese Anwendung mit eingeschränkten Funktionen (nur die Liste der Hotspots im Netzwerk wird angezeigt). Sie müssen sich anmelden, um die Objekte auf der Karte zu finden
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="list-container" class="section list">
+                <div class="container">
+                    <div id="ap-list-head"><h5>Hotspots</h5></div>
+                    <div class="row">
+                        <div class="one-full-column">
+                            <div id="ap-list">
+                                <div class="ap-element">
+                                    <div class="left-info"><h4>Address</h4><p>Description</p></div>
+                                    <div class="right-info"><p>0 km</p><img src="/stock/roma/img/icon-hotspot.png" alt="hotspot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map-container" class="section map">
+                <div class="container">
+                    <div class="row separator"></div>
+                    <div class="row">
+                        <div class="one-full-column">
+                            <div id="ap-position-map" style="height: 400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section foo">
+                <div class="container">
+                    <div class="row separator"></div>
+                    <div class="row separator"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
