@@ -1,0 +1,45 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+name: DigitRomaWiFi - Welcome Page
+url: 'https://github.com/digitromawifi/www'
+releaseDate: '2018-05-03'
+developmentStatus: stable
+platforms:
+  - web
+softwareType: standalone/web
+categories:
+  - website-builder
+maintenance:
+  type: none
+legal:
+  license: AGPL-3.0-only
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - it
+    - en
+    - pt
+    - es
+    - fr
+    - de
+it:
+  riuso:
+    codiceIPA: c_h501
+  piattaforme:
+    spid: true
+description:
+  it:
+    genericName: Web pages
+    shortDescription: DigitRomaWiFi Welcome Page
+    longDescription: >
+      Questo progetto comprende le pagine web che erogano il servizio
+      DigitRomaWiFi, ossia il servizio Wi-Fi pubblico offerto dal Comune di Roma
+      negli spazi pubblici della capitale. Le pagine web sono accessibili
+      tramite url https://www.digitromawifi.it/ e sono disponibili in sei lingue
+      diverse: italiano, inglese, tedesco, spagnolo, francese e portoghese. Su
+      tali pagine sono inoltre presenti i rimandi ai canali social del Comune di
+      Roma (Facebook, Youtube e Twitter) ed agli altri siti web del Comune di
+      Roma (Acea, AMA, ATAC, etc.).
